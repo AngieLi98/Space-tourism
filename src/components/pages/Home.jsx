@@ -9,7 +9,7 @@ const Home = () => {
         <Header />
         
         {/* Contenido principal de la página */}
-        <div className="flex flex-col items-center justify-center">
+        {/* <div className="flex flex-col items-center justify-center">
           <div className="text-tertiary">
           <h2>SO, YOU WANT TO TRAVEL TO</h2>
           <h2>SPACE</h2>
@@ -18,7 +18,7 @@ const Home = () => {
           <div>
             <img src="" alt="" />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

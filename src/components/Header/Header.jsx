@@ -11,24 +11,29 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex flex-row items-center justify-between w-full px-8 py-4 absolute top-0">
+      <header className="flex flex-row items-center justify-between w-full pl-10 pt-10 absolute top-0">
         {/* Logo */}
         <img src={logo} alt="Logo" className="h-12 w-auto" />
-        <div className="relative mt-20">
-          <hr className="border-tertiary border-t-2" />
-          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-white rounded-full"></div>
+
+        {/* Divisor horizontal */}
+        <div className="flex-1 mx-4 relative">
+          <hr className="absolute -right-10 border-t-1 border-tertiary opacity-5 w-full z-20" />
         </div>
+
         {/* Contenedor de los enlaces con blur */}
-        <ul className="bg-tertiary bg-opacity-5 backdrop-blur-lg flex flex-row space-x-12 px-14 py-7">
+        <ul className="bg-tertiary bg-opacity-5 backdrop-blur-lg flex flex-row space-x-8 pl-28 pr-48 py-8 z-10 relative">
           {links.map((link, index) => (
-            <li key={index} className="text-tertiary">
+            <li key={index} className="header-li text-tertiary tracking-widest">
               <NavLink
                 className={({ isActive }) =>
-                  [isActive ? "link active" : "link"].join(" ")
+                  isActive
+                    ? "relative text-tertiary after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-34px] after:h-[3px] after:bg-tertiary after:rounded-full"
+                    : "relative text-tertiary"
                 }
                 to={link.path}
               >
-                {link.label}
+                <span className="font-bold">{link.label.slice(0, 2)}</span>{' '}
+                {link.label.slice(2)}
               </NavLink>
             </li>
           ))}
