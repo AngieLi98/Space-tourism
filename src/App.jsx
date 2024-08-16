@@ -4,6 +4,7 @@ import Home from './components/pages/Home';
 import Destination from './components/pages/Destination';
 import Crew from './components/pages/Crew';
 import Technology from './components/pages/Technology';
+import './index.css'
 
 function App() {
 
