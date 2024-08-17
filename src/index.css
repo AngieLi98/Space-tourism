@@ -26,3 +26,40 @@
 .description-planet, .avg-text, .est-text {
   font-family: "Barlow Condensed", sans-serif; 
 }
+
+@media (max-width: 750px) {
+  .planet-pick {
+    margin-top: 6rem;
+    position: relative;
+    right: 10rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .planet-pick {
+    position: relative;
+    left: 10px;
+  }
+  .description-planet {
+    max-width: 37ch;
+    position: relative;
+    left: 4rem;
+  }
+
+  hr {
+    max-width: 400px;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .avg-text, .est-text {
+    font-size: 1rem;
+  }
+
+  .distance-text, .days-text {
+    font-size: 1.5rem;
+  }
+}

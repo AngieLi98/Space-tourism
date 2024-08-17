@@ -17,7 +17,7 @@ export default {
       'footer-texture': "url('/img/footer-texture.png')",
       'background-destination': "url('/src/assets/images/destination/background-destination-desktop.jpg')",
 
-    }
+    },
   },
   plugins: [],
 }
