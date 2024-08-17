@@ -40,7 +40,7 @@ const Destination = () => {
   return (
     <div className="background-destination min-h-screen bg-cover bg-no-repeat">
       <Header />
-      <section className="text-white flex flex-col md:flex-row items-center justify-between px-6 py-16 md:px-24 md:py-32 space-y-8 md:space-y-0">
+      <section className="planet-section text-white flex flex-col md:flex-row items-center justify-between px-6 py-16 md:px-24 md:py-32 space-y-8 md:space-y-0">
         <div className="md:w-1/2 flex flex-col items-center md:items-start">
         <h2 className="planet-pick text-xl md:text-2xl font-thin tracking-widest uppercase mb-10 md:mb-10 md:ml-0 text-left relative z-10 ">
           <strong className="text-gray">01</strong> 
