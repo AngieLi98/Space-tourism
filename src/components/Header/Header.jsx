@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/shared/logo.svg";
+import hamburger from "../../assets/images/shared/icon-hamburger.svg"
+import close from "../../assets/images/shared/icon-close.svg"
 
 const Header = () => {
+  
   const links = [
     { label: "00 HOME", path: "/" },
     { label: "01 DESTINATION", path: "/Destination" },
