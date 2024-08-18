@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex flex-row items-center justify-between w-full pl-10 pt-10 absolute top-0">
+      <header className="flex flex-row items-center justify-between w-full pl-10 md:pt-10 absolute top-0">
         {/* Logo */}
         <img src={logo} alt="Logo" className="h-12 w-auto" />
 
@@ -21,7 +21,7 @@ const Header = () => {
         </div>
 
         {/* Contenedor de los enlaces con blur */}
-        <ul className="bg-tertiary bg-opacity-5 backdrop-blur-lg flex flex-row space-x-8 pl-28 pr-48 py-8 z-10 relative">
+        <ul className="bg-tertiary bg-opacity-5 backdrop-blur-lg flex flex-row space-x-8 pl-9 pr-16 py-8 z-10 relative md:pl-28 md:pr-48">
           {links.map((link, index) => (
             <li key={index} className="header-li text-tertiary tracking-widest">
               <NavLink
@@ -32,8 +32,12 @@ const Header = () => {
                 }
                 to={link.path}
               >
-                <span className="font-bold">{link.label.slice(0, 2)}</span>{' '}
-                {link.label.slice(2)}
+                {/* Mostrar solo los números en pantallas grandes */}
+                <span className="font-bold hidden md:inline">{link.label.slice(0, 2)}</span>
+                {/* Mostrar solo el nombre de la página en pantallas pequeñas */}
+                <span className="md:hidden">{link.label.slice(3)}</span>
+                {/* Mostrar el nombre de la página en pantallas grandes */}
+                <span className="hidden md:inline">{link.label.slice(2)}</span>
               </NavLink>
             </li>
           ))}
