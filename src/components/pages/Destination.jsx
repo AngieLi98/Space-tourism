@@ -1,41 +1,33 @@
-import React, { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Header from '../Header/Header';
+import { getDestinations } from '../../services/spaceServices';
 
-const destinations = {
-  Moon: {
-    name: 'Moon',
-    description: "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
-    distance: '384,400 KM',
-    travelTime: '3 DAYS',
-    image: '/src/assets/images/destination/image-moon.webp', 
-  },
-  Mars: {
-    name: 'Mars',
-    description: "Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!",
-    distance: '225 MIL. KM',
-    travelTime: '9 MONTHS',
-    image: '/src/assets/images/destination/image-mars.webp',
-  },
-  Europa: {
-    name: 'Europa',
-    description: "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
-    distance: '628 MIL. KM',
-    travelTime: '3 YEARS',
-    image: '/src/assets/images/destination/image-europa.webp',
-  },
-  Titan: {
-    name: 'Titan',
-    description: "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
-    distance: '1.6 BIL. KM',
-    travelTime: '7 YEARS',
-    image: '/src/assets/images/destination/image-titan.webp',
-  },
-};
 
 const Destination = () => {
+  const [destinations, setDestinations] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState('Moon');
+  const [destinationData, setDestinationData] = useState(null);
 
-  const destinationData = destinations[selectedDestination];
+  const fetchDestinations = useCallback(() => {
+    getDestinations().then((response) => {
+      setDestinations(response);
+      setDestinationData(response.find(dest => dest.name === selectedDestination));
+    }).catch(error => console.warn(error));
+  }, [selectedDestination]);
+
+  useEffect(() => {
+    fetchDestinations();
+  }, [fetchDestinations]);
+
+  useEffect(() => {
+    if (destinations.length) {
+      setDestinationData(destinations.find(dest => dest.name === selectedDestination));
+    }
+  }, [selectedDestination, destinations]);
+
+  if (!destinationData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="background-destination min-h-screen bg-cover bg-no-repeat">
@@ -48,24 +40,24 @@ const Destination = () => {
         </h2>
 
           <img
-            src={destinationData.image}
+            src={destinationData.images.webp}
             alt={destinationData.name}
             className="w-[290px] md:w-[350px] mx-auto"
           />
         </div>
         <div className="md:w-1/2 text-center md:text-left md:ml-16">
           <nav className="planet-nav flex justify-center md:justify-start space-x-8 mb-6 mt-20 md:mb-12">
-            {Object.keys(destinations).map((dest) => (
+            {destinations.map((dest) => (
               <button
-                key={dest}
-                onClick={() => setSelectedDestination(dest)}
+                key={dest.name}
+                onClick={() => setSelectedDestination(dest.name)}
                 className={`uppercase tracking-widest md:text-lg pb-2 ${
-                  selectedDestination === dest
+                  selectedDestination === dest.name
                     ? 'border-b-2 border-white text-tertiary' 
                     : 'text-[#D0D6F9] hover:border-b-2 hover:border-[#D0D6F9]'
                 }`}
               >
-                {dest}
+                {dest.name}
               </button>
             ))}
           </nav>
@@ -84,13 +76,13 @@ const Destination = () => {
               <h3 className="avg-text text-xs md:text-sm text-[#D0D6F9] uppercase">
                 Avg. Distance
               </h3>
-              <p className="distance-text text-xl md:text-2lg text-tertiary">{destinationData.distance}</p>
+              <p className="distance-text text-xl md:text-2lg text-tertiary uppercase">{destinationData.distance}</p>
             </div>
             <div>
               <h3 className="est-text text-xs md:text-sm text-[#D0D6F9] uppercase">
                 Est. Travel Time
               </h3>
-              <p className=" days-text text-xl md:text-2lg text-tertiary mt-1">{destinationData.travelTime}</p>
+              <p className=" days-text text-xl md:text-2lg text-tertiary mt-1 uppercase">{destinationData.travel}</p>
             </div>
           </div>
         </div>
