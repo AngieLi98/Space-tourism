@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
+      'barlow': ['"Barlow"', 'sans-serif'],
+      'bellefair': ['"Bellefair"', 'serif'],
+      
+    },
+  
     colors: {
       primary: "#0B0D17",
       secondary: "#D0D6F9",
