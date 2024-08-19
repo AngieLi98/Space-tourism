@@ -16,6 +16,7 @@ export default {
       'background-home': "url('/src/assets/images/home/background-home-desktop.jpg')",
       'footer-texture': "url('/img/footer-texture.png')",
       'background-destination': "url('/src/assets/images/destination/background-destination-desktop.jpg')",
+      'background-crew': "url('/src/assets/images/crew/background-crew-desktop.jpg')"
     },
     
   },
