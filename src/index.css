@@ -17,20 +17,6 @@ body {
   background-image: url(/src/assets/images/destination/background-destination-desktop.jpg);
 }
 
-.planet-pick, .planet-nav .header-li  {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
-}
-
-.title-planet, .distance-text, .days-text   {
-  font-family: "Bellefair", serif;
-  font-weight: 400;
-}
-
-.description-planet, .avg-text, .est-text,  {
-  font-family: "Barlow Condensed", sans-serif; 
-}
-
 .home-h2, .space, .header-li {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
