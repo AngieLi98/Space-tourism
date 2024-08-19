@@ -21,3 +21,13 @@ export const getCrew = async () => {
     return null;
   }
 };
+
+export const getTechnologies = async () => {
+  try {
+    const response = await axios.get(endpoints.technology);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};

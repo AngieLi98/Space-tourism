@@ -62,7 +62,7 @@ const Destination = () => {
             ))}
           </nav>
 
-          <h1 className="font-bellefair font-light text-2xl md:text-8xl font-semibold uppercase text-tertiary">
+          <h1 className="font-bellefair font-light text-7xl md:text-8xl uppercase text-tertiary">
             {destinationData.name}
           </h1>
           <p className="font-barlow-condensed description-planet text-[#D0D6F9] mt-4 leading-relaxed md:leading-loose max-w-[65ch] md:max-w-[48ch]">
