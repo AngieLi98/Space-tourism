@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex flex-row items-center justify-between w-full pl-10 pt-10 md:pt-10 sm:pt-0 absolute top-0 z-50">
+      <header className="flex flex-row items-center justify-between w-full pl-10 pt-10 md:pt-10 sm:pt-0 absolute top-0 z-50 font-barlow-condensed">
         {/* Logo */}
         <img src={logo} alt="Logo" className="h-12 w-auto" />
 

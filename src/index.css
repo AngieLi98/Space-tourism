@@ -21,18 +21,6 @@ body {
   background-image: url(/src/assets/images/technology/background-technology-desktop.jpg);
 } 
 
-.home-h2, .space, .header-li {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
-}
-
-.space, .button-explore {
-  font-family: "Bellefair", serif;
-  font-weight: 400;
-}
-
-
-
 
 @media (max-width: 750px) {
   .planet-pick {
