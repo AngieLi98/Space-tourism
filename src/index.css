@@ -63,12 +63,15 @@ body {
   .distance-text, .days-text {
     font-size: 1.5rem;
   }
+
 }
 
 @media (max-width: 768px) {
   .home-background  {
     background-image: url(/src/assets/images/home/background-home-tablet.jpg);
   }
+
+  .bg-background-crew { 
+    background-image: url(/src/assets/images/crew/background-crew-tablet.jpg);
+  }
 }
-
-
