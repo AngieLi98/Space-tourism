@@ -17,6 +17,10 @@ body {
   background-image: url(/src/assets/images/destination/background-destination-desktop.jpg);
 }
 
+.background-technology {
+  background-image: url(/src/assets/images/technology/background-technology-desktop.jpg);
+} 
+
 .home-h2, .space, .header-li {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
@@ -26,6 +30,8 @@ body {
   font-family: "Bellefair", serif;
   font-weight: 400;
 }
+
+
 
 
 @media (max-width: 750px) {
