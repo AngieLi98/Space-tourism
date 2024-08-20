@@ -18,6 +18,7 @@ export default {
       secondary: "#D0D6F9",
       tertiary: "#FFFFFF",
       gray: "#9ca3af",
+      grayline: "#404040"
     },
     backgroundImage: {
       'background-home': "url('/src/assets/images/home/background-home-desktop.jpg')",
