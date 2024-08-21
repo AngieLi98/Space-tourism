@@ -34,7 +34,7 @@ const Destination = () => {
       <Header />
       <section className="planet-section text-white flex flex-col md:flex-row items-center justify-between px-6 py-16 md:px-24 md:py-32 space-y-8 md:space-y-0">
         <div className="md:w-1/2 flex flex-col items-center md:items-start">
-        <h2 className="font-barlow-condensed font-bold planet-pick text-xl md:text-2xl font-thin tracking-widest uppercase mb-10 md:mb-10 md:ml-0 text-left relative z-10 ">
+        <h2 className="font-barlow-condensed planet-pick text-xl md:text-2xl font-thin tracking-widest uppercase mb-10 md:mb-10 md:ml-0 text-left relative z-10 ">
           <strong className="text-gray">01</strong> 
           <span className="text-tertiary"> PICK YOUR DESTINATION</span>
         </h2>
