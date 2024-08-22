@@ -60,6 +60,39 @@ body {
 
 }
 
+@media (max-width: 550px) {
+  .title-crew {
+    position: relative;
+    top: 3rem;
+  }
+  .role-crew{
+    position: relative;
+    top: 2rem;
+  }
+  .name-crew {
+    position: relative;
+    top: 2rem;
+  }
+  .bio-crew {
+    position: relative;
+    top: 2rem;
+    font-size: 16px;
+  }
+  .image-crew {
+    position: relative;
+    bottom: 13rem;
+    left: 1rem;
+  }
+  .bar-vertical-crew {
+    position: relative;
+    bottom: 13rem;
+  }
+  .botton-selection-crew {
+    position: relative;
+    bottom: 14rem;
+  }
+}
+
 @media (max-width: 768px) {
   .home-background  {
     background-image: url(/src/assets/images/home/background-home-tablet.jpg);
