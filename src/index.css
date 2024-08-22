@@ -102,13 +102,13 @@ body {
 /* Imagen para mobile en technology*/
 @media (max-width: 767px) {
   .background-technology {
-    background-image: url('src/assets/images/technology/background-technology-mobile.jpg');
+    background-image: url(/src/assets/images/technology/background-technology-mobile.jpg);
   }
 }
 
 /* Imagen para tablet en technology*/
 @media (min-width: 768px) and (max-width: 1023px) {
   .background-technology {
-    background-image: url('src/assets/images/technology/background-technology-tablet.jpg');
+    background-image: url(/src/assets/images/technology/background-technology-tablet.jpg);
   }
 }
