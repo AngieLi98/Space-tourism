@@ -63,7 +63,7 @@ body {
 @media (max-width: 550px) {
   .title-crew {
     position: relative;
-    top: 3rem;
+    top: 2.5rem;
   }
   .role-crew{
     position: relative;
@@ -80,16 +80,16 @@ body {
   }
   .image-crew {
     position: relative;
-    bottom: 13rem;
+    bottom: 12rem;
     left: 1rem;
   }
   .bar-vertical-crew {
     position: relative;
-    bottom: 13rem;
+    bottom: 12rem;
   }
   .botton-selection-crew {
     position: relative;
-    bottom: 14rem;
+    bottom: 13rem;
   }
 }
 
